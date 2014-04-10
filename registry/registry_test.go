@@ -5,7 +5,7 @@
 package registry
 
 import (
-	"github.com/skynetservices/skydns/msg"
+	"github.com/fabware/skydns/msg"
 	"testing"
 	"time"
 )

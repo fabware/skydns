@@ -7,8 +7,8 @@ package registry
 import (
 	"errors"
 	"fmt"
-	"github.com/miekg/dns"
-	"github.com/skynetservices/skydns/msg"
+	"github.com/fabware/dns"
+	"github.com/fabware/skydns/msg"
 	"log"
 	"sort"
 	"strings"

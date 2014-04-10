@@ -6,7 +6,7 @@ package server
 
 import (
 	"crypto/sha1"
-	"github.com/miekg/dns"
+	"github.com/fabware/dns"
 	"log"
 	"os"
 	"strings"

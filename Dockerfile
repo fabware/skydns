@@ -1,8 +1,8 @@
 FROM crosbymichael/golang
 
-ADD . /go/src/github.com/skynetservices/skydns
+ADD . /go/src/github.com/fabware/skydns
 
-RUN cd /go/src/github.com/skynetservices/skydns && \
+RUN cd /go/src/github.com/fabware/skydns && \
     go get github.com/codegangsta/cli && \
     go get && \
     go install . ./...

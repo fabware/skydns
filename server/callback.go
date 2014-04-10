@@ -6,10 +6,10 @@ package server
 
 import (
 	"encoding/json"
-	"github.com/goraft/raft"
+	"github.com/fabware/raft"
 	"github.com/gorilla/mux"
-	"github.com/skynetservices/skydns/msg"
-	"github.com/skynetservices/skydns/registry"
+	"github.com/fabware/skydns/msg"
+	"github.com/fabware/skydns/registry"
 	"log"
 	"net/http"
 	"strings"

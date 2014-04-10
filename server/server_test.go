@@ -7,8 +7,8 @@ package server
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/miekg/dns"
-	"github.com/skynetservices/skydns/msg"
+	"github.com/fabware/dns"
+	"github.com/fabware/skydns/msg"
 	"io/ioutil"
 	"net"
 	"net/http"
