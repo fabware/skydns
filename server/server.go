@@ -9,12 +9,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/fabware/raft"
-	"github.com/gorilla/mux"
 	"github.com/fabware/dns"
+	"github.com/fabware/raft"
 	"github.com/fabware/skydns/msg"
 	"github.com/fabware/skydns/registry"
 	"github.com/fabware/skydns/stats"
+	"github.com/gorilla/mux"
 	"log"
 	"math"
 	"net"
@@ -149,7 +149,8 @@ func (s *Server) Start() (*sync.WaitGroup, error) {
 	log.Printf("Initializing Server. DNS Addr: %q, HTTP Addr: %q, Data Dir: %q, Forwarders: %q", s.dnsAddr, s.httpAddr, s.dataDir, s.nameservers)
 
 	// Initialize and start Raft server.
-	transporter := raft.NewHTTPTransporter("/raft")
+	timeout := time.Duration(5) * time.Second
+	transporter := raft.NewHTTPTransporter("/raft", timeout)
 	s.raftServer, err = raft.NewServer(s.HTTPAddr(), s.dataDir, transporter, nil, s.registry, "")
 	if err != nil {
 		log.Fatal(err)
